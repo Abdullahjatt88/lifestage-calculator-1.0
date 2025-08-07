@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Life Stage Checker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="font-family: Arial; text-align: center; padding: 30px;">
+  
+  <h2>Check Your Life Stage</h2>
+
+  <input type="number" id="ageInput" placeholder="Enter your age">
+  <br><br>
+  <button onclick="checkStage()">Check</button>
+  
+  <h3 id="result"></h3>
+
+  <p style="margin-top: 50px; color: gray; font-size: 12px;">
+    Made by Abdullah Ahmad — Don't message him, he is busy making the APK version.
+  </p>
+
+  <script>
+    function checkStage() {
+      let age = document.getElementById("ageInput").value;
+      let result = "";
+
+      if (age < 10) {
+        result = "Kid";
+      } else if (age < 17) {
+        result = "Teenager";
+      } else if (age < 30) {
+        result = "Adult";
+      } else if (age < 50) {
+        result = "Senior Adult";
+      } else {
+        result = "Old Age";
+      }
+
+      document.getElementById("result").innerText = "You are in: " + result;
+    }
+  </script>
+
+</body>
+</html>
